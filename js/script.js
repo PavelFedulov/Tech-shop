@@ -2,7 +2,7 @@
 const body = document.querySelector("body");
 const wrapper = document.createElement("div");
 const wrapperFull = document.createElement("div");
-
+const buttonUp = document.createElement('div');
 //Header start
 
 //переменные тэгов
@@ -33,13 +33,16 @@ headerLogoLink.classList.add("header__logo-link");
 headerTitle.classList.add("header__title");
 headerNav.classList.add("header__nav");
 headerList.classList.add("header__list");
+buttonUp.classList.add('btn__up', 'btn__up-hide');
 
 //section: apple
+appleSection.setAttribute('id', 'Apple')
 appleSection.classList.add("apple");
 wrapperFull.classList.add("wrapper-full");
 appleCaption.classList.add("apple__caption", "section__caption");
 appleTitle.classList.add("apple__title", "section__title");
 appleCards.classList.add("apple__cards", "section__cards");
+
 
 //заполнение тэгов
 headerTitle.textContent = "Tech shop";
@@ -48,6 +51,7 @@ appleTitle.textContent = "Let's see what we have from Apple";
 //сборка тэгов
 
 //header
+body.appendChild(buttonUp);
 body.appendChild(header);
 header.appendChild(wrapper);
 wrapper.appendChild(headerWrapper);
@@ -104,7 +108,9 @@ const generateAppleCard = (pic, model, year) => {
       <p class="apple__card-subtitle section__card-subtitle">
         ${year}
       </p>
+      <div class = 'bt__buy-block'>
       <button class="bt__buy">Купить</button>
+      </div>
   </div>
   `;
 };
@@ -112,15 +118,18 @@ const generateAppleCard = (pic, model, year) => {
 
 //массив с картинками карточек apple
 const appleMBPPicsArray = [
-  "./img/MacBook/MacBook_Pro_1.jpg",
-  "./img/MacBook/MacBook_Pro_2.jpg",
-  "./img/MacBook/MacBook_Pro_3.jpg",
-  "./img/MacBook/MacBook_Pro_4.jpg",
+  './img/AppleImg/MacBook_Pro_2.jpg',
+  './img/AppleImg/iPhone_12_1.jpg',
+  './img/AppleImg/Apple_Watch_1.jpg'
 ];
 
 const appleCardList = [
   { pic: appleMBPPicsArray[0], model: "MacBook Pro", year: 2015 },
-  { pic: appleMBPPicsArray[1], model: "MacBook Pro", year: 2015 },
+  { pic: appleMBPPicsArray[1], model: "iPhone 12", year: 2014 },
+  { pic: appleMBPPicsArray[2], model: "Apple Watch Series 8", year: 2022 },
+  { pic: appleMBPPicsArray[1], model: "iPhone 12", year: 2014 },
+  { pic: appleMBPPicsArray[1], model: "iPhone 12", year: 2014 },
+
 ];
 
 const appleCardHTML = appleCardList
@@ -145,7 +154,8 @@ for (let smoothLink of smoothLinks) {
   });
 }
 
-const btnUP = {
+//кнопка поднятия вверх
+const btnUp = {
   el: document.querySelector(".btn__up"),
   show() {
     // удаляет класс btn__up-hide
