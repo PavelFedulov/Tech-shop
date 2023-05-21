@@ -37,33 +37,31 @@ headerWrapper.appendChild(headerNav);
 headerNav.appendChild(headerList);
 
 //массив объектов headerList
-const headerListArray = [
-  'Apple',
-  'Samsung',
-  'Xiaomi',
+const headerItemsArray = [
+  {navPoint: 'Apple'},
+  {navPoint: 'Samsung'},
+  {navPoint: 'Xiaomi'},
 ];
 
-//цикл для сборки headerList
-const createHeaderHTMLList = (headerListArray) => {
-  const parts = [];
-  for (const item of headerListArray) {
-    parts.push(`<li class = "header__item">
-    <a href = "#apple" class = "header__link">
-    #{item}
+//функция создания элементов меню навигации
+const createHeaderHTMLList = (navPoint) => {
+return `<li class = "header__item">
+    <a href = "#${navPoint}" class = "header__link">
+    ${navPoint}
     </a>
-    </li>`)
-  }
-  const headerLink = parts.join('');
-  const result = headerList.appendChild(headerLink);
-  return result;
+    </li>`
 }
 
+//создаем переменную с HTML кодом из функции
+const headerListHTML = headerItemsArray.map(navPointName => {
+  return createHeaderHTMLList(navPointName.navPoint);
+}).join('')
+//вставляем HTML в headerList
+headerList.innerHTML = headerListHTML;
+//вствыляем headerList в headerNav
+headerNav.insertAdjacentElement(headerList);
 
-
-
-
-
-
+//Header end
 
 
 
