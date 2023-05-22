@@ -44,6 +44,11 @@ const footerLogo = document.createElement('div');
 const footerTitle = document.createElement('h2');
 const footerNav = document.createElement('footerNav');
 const footerList = document.createElement("ul");
+
+//order form
+
+
+
 //----------------------------------------------------------------------------
 
 //классы тэгов
@@ -103,7 +108,7 @@ headerTitle.textContent = "Tech shop";
 appleTitle.textContent = "Let's see what we have from Apple";
 samsungTitle.textContent = "That's what we have by Samsung";
 xiaomiTitle.textContent = "And what about Xiaomi";
-footerTitle.textContent = 'TechShop'
+footerTitle.textContent = 'Tech Shop'
 
 //----------------------------------------------------------------------------
 
@@ -188,7 +193,7 @@ headerList.innerHTML = headerListHTML;
 //Apple block start
 
 //функция создания карточки
-const generateAppleCard = (pic, model) => {
+const generateAppleCard = (pic, model, date) => {
     return `
   <div class="apple__card section__card">
       <img class = "apple__card-pic section__card-pic" src=${pic} alt="macbook pro" onClick="imgsrc();">
@@ -196,7 +201,7 @@ const generateAppleCard = (pic, model) => {
         ${model}
       </h3>
       <p class="apple__card-subtitle section__card-subtitle">
-        ${getDateForCard()}
+        ${date}
       </p>
       <div class = 'bt__buy-block'>
       <button class="bt__buy">Купить</button>
@@ -207,12 +212,12 @@ const generateAppleCard = (pic, model) => {
 
 //массив объектов карточек apple
 const appleCardList = [
-    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "MacBook Pro", year: 2015 },
-    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "iPhone 12", year: 2014 },
-    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Apple Watch Series 8", year: 2022 },
-    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "MacBook Pro", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "MacBook Pro", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "MacBook Pro", year: 2015 },
+    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "MacBook Pro", date: getDateForCard() },
+    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "iPhone 12", date: getDateForCard() },
+    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Apple Watch Series 8", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "MacBook Pro", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "MacBook Pro", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "MacBook Pro", date: getDateForCard() },
 ];
 
 
@@ -229,16 +234,16 @@ appleCards.innerHTML = appleCardHTML;
 
 //массив объектов карточек samsung
 const samsungCardList = [
-    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "Samsung", year: 2015 },
-    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "Samsung", year: 2014 },
-    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Samsung", year: 2022 },
-    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "Samsung", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "Samsung", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "Samsung", year: 2015 },
+    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "Samsung", date: getDateForCard() },
+    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "Samsung", date: getDateForCard() },
+    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Samsung", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "Samsung", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "Samsung", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "Samsung", date: getDateForCard() },
 ]
 
 //функция создания карточки
-const generateSamsungCard = (pic, model) => {
+const generateSamsungCard = (pic, model, date) => {
     return `
   <div class="samsung__card section__card">
       <img class = "samsung__card-pic section__card-pic" src=${pic} alt="macbook pro" onClick="imgsrc();">
@@ -246,7 +251,7 @@ const generateSamsungCard = (pic, model) => {
         ${model}
       </h3>
       <p class="apple_samsung-subtitle section__card-subtitle">
-        ${getDateForCard()}
+        ${date}
       </p>
       <div class = 'bt__buy-block'>
       <button class="bt__buy">Купить</button>
@@ -267,16 +272,16 @@ samsungCards.innerHTML = samsungCardHTML;
 
 //массив объектов карточек xiaomi
 const xiaomiCardList = [
-    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "Xiaomi", year: 2015 },
-    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "Xiaomi", year: 2014 },
-    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Xiaomi", year: 2022 },
-    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "Xiaomi", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "Xiaomi", year: 2015 },
-    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "Xiaomi", year: 2015 },
+    { pic: './img/AppleImg/MacBook_Pro_2.jpg', model: "Xiaomi", date: getDateForCard() },
+    { pic: './img/AppleImg/iPhone_12_1.jpg', model: "Xiaomi", date: getDateForCard() },
+    { pic: './img/AppleImg/Apple_Watch_1.jpg', model: "Xiaomi", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_1.jpg', model: "Xiaomi", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_3.jpg', model: "Xiaomi", date: getDateForCard() },
+    { pic: './img/AppleImg/MacBook_Pro_4.jpg', model: "Xiaomi", date: getDateForCard() },
 ]
 
 //функция создания карточки
-const generateXiaomiCard = (pic, model) => {
+const generateXiaomiCard = (pic, model, date) => {
     return `
   <div class="xiaomi__card section__card">
       <img class = "xiaomi__card-pic section__card-pic" src=${pic} alt="macbook pro" onClick="imgsrc();">
@@ -284,7 +289,7 @@ const generateXiaomiCard = (pic, model) => {
         ${model}
       </h3>
       <p class="apple_xiaomi-subtitle section__card-subtitle">
-        <div class = "date"> ${getDateForCard()} </div>
+        <div class = "date"> ${date} </div>
       </p>
       <div class = 'bt__buy-block'>
       <button class="bt__buy">Купить</button>
@@ -335,19 +340,31 @@ footerList.innerHTML = footerListHTML;
 
 
 // получение даты
-function getDateForCard() {
-    const date = new Date();
-    const day = date.getDate();
-    const week = date.getDay();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    console.log(date);
-    console.log(day);
-    console.log(week);
-    console.log(month);
-    console.log(year);
+function getDateForCard(date) {
+    const day = new Date(date);
+    const weekday = day.getDay();
+    const months = [
+        'Января',
+        'Февраля',
+        'Марта',
+        'Апреля',
+        'Мая',
+        'Июня',
+        'Июля',
+        'Августа',
+        'Сентября',
+        'Октября',
+        'Ноября',
+        'Декабря',
+    ];
 
-    return `День:${day},номер недели: ${week},месяц:${month}, год: ${year} `
+    const year = day.getFullYear();
+    let week = weekday - 1;
+    if (week < 0) {
+        week = 6;
+    }
+
+    return `${months[week]}${year},${week} неделя`;
 }
 
 
