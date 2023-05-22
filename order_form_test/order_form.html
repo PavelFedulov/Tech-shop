@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body class="form__body form__body-hide">
+    <div class="form">
+      <form action="" class="order__form">
+        <div class="order__wrapper">
+          <div class="quantity__block">
+            <div class="quantity__label">
+              <label for="order__quantity" class="quantity__title"
+                >Укажите количество товаров:</label
+              >
+            </div>
+            <input
+              type="number"
+              class="order__quantity"
+              min="1"
+              placeholder="1"
+            />
+          </div>
+
+
+          <div class="color__block">
+            <p class="color__group-title">Выберите цвет устройства:</p>
+            <ul class="color__group" id="color__group">
+              <li class="color__item">
+                <label for="color">Белый</label>
+                <input type="radio" id="color" name="color" value="Белый" />
+              </li>
+              <li class="color__item">
+                <label for="color">Красный</label>
+                <input type="radio" id="color2" name="color" value="Красный" />
+              </li>
+              <li class="color__item">
+                <label for="color">Черный</label>
+                <input type="radio" id="color3" name="color" value="Черный" />
+              </li>
+            </ul>
+          </div>
+
+          <div class="comment">
+            <div class="comment__title">
+              <label for="comment" class="comment__title"
+                >Укажите комментарий к заказу:</label
+              >
+            </div>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="20"
+              rows="10"
+              maxlength="2000"
+              class="comment__field"
+            ></textarea>
+          </div>
+          
+          <div class="form__buttons">
+            <button type="submit" id="buy-button" class="bt__buy form__bt-buy">
+              Купить
+            </button>
+            <button
+              type="reset"
+              id="close-button"
+              class="bt__buy form__bt-close"
+            >
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!--
+    <form>
+    <label for="quantity">Количество:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+    
+    <div class="color-group">
+      <label for="color1">Цвет 1:</label>
+      <input type="radio" id="color1" name="color" value="red"><label for="color2">Красный</label><br>
+      
+      <input type="radio" id="color2" name="color" value="green"><label for="color3">Зеленый</label><br>
+      
+      <input type="radio" id="color3" name="color" value="blue"><label for="color4">Синий</label><br><br><br>
+  
+      <label for="comment">Комментарий:</label>
+      <textarea id="comment" name="comment" rows="5" cols="50" maxlength="2000"></textarea><br><br>
+  
+      <button type="submit" id="buy-button">Купить</button>
+      <button type="reset" id="close-button">Закрыть</button>
+    </div>
+  </form>
+  <script src='./js/order_form.js'></script>
+-->
