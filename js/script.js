@@ -642,6 +642,9 @@ function darkThemeShow(e) {
             footerLink[m].classList.add("footer__link-dark");
             for (let a = 0; a < sectionTitle.length; a++) {
               sectionTitle[a].classList.add("section__title-dark");
+              for (let b = 0; b < buttonBuy.length; b++) {
+                buttonBuy[b].classList.add('bt__buy-dark');
+              }
             }
           }
         }
@@ -674,6 +677,9 @@ function lightThemeShow(e) {
             footerLink[m].classList.remove("footer__link-dark");
             for (let a = 0; a < sectionTitle.length; a++) {
               sectionTitle[a].classList.remove("section__title-dark");
+              for (let b = 0; b < buttonBuy.length; b++) {
+                buttonBuy[b].classList.remove('bt__buy-dark');
+              }
             }
           }
         }

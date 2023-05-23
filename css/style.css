@@ -570,11 +570,11 @@ img {
 /* Dark theme */
 
 .body__dark {
-    background-color: rgb(25, 25, 75);
+    background-color: rgb(15, 15, 15);
 }
 
 .header__dark {
-    background-color: rgb(50,50,115);
+    background-color: rgb(80,80,80);
 }
 
 .header__title-dark,
@@ -588,5 +588,9 @@ img {
 }
 
 .section__card-dark {
-    background-color: rgb(70,65,170);
+    background-color: rgb(85,85,85);
+}
+
+.bt__buy-dark {
+    background-color: rgb(0, 5, 65)
 }
