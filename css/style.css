@@ -257,26 +257,30 @@ img {
     font-family: 'Montserrat';
 }
 
-
-
 .light__theme-button {
     filter: invert(100);
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
+
 
 /*.light__theme-button-hide {
     display: none;
 }
 */
+
 .dark__theme-button {
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .dark__theme-button-hide {
     display: none;
 }
+
+
 /* Header styles start */
 
 .header {
@@ -305,7 +309,6 @@ img {
     justify-content: end;
     padding-top: 2%;
 }
-
 
 .header__logo {
     padding-left: 5%;
@@ -546,6 +549,7 @@ img {
 
 .comment__field {
     width: 100%;
+    font-family: "Montserrat";
 }
 
 .form__buttons {
@@ -566,15 +570,18 @@ img {
     opacity: .10;
 }
 
+
 /*------------------------------------------------*/
-/* Dark theme */
+
+
+/* Dark theme main*/
 
 .body__dark {
     background-color: rgb(15, 15, 15);
 }
 
 .header__dark {
-    background-color: rgb(80,80,80);
+    background-color: rgb(80, 80, 80);
 }
 
 .header__title-dark,
@@ -588,9 +595,34 @@ img {
 }
 
 .section__card-dark {
-    background-color: rgb(85,85,85);
+    background-color: rgb(85, 85, 85);
 }
 
 .bt__buy-dark {
     background-color: rgb(0, 5, 65)
+}
+
+
+/* Dark theme main end */
+
+
+/* Dark theme form */
+
+.form-dark {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+.order__quantity-dark {
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+
+.comment__field-dark {
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+
+.form__bt-close-dark {
+    background-color: rgba(129, 0, 0, 0.851);
 }
